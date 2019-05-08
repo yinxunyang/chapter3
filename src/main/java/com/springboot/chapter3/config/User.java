@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Getter
 @Setter
-@Component("user")
+// Component是标明该类被扫描进入Spring IOC 容器
 public class User {
     @Value("1")
     private Long id;
