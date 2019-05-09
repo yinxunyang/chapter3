@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "com.springboot.chapter3.*")
+@ComponentScan(basePackages = "com.springboot.chapter3.*",lazyInit = true)
 public class AppConfig {
     @Bean(name = "user")
     public User initUser() {
