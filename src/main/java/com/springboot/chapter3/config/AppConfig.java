@@ -1,11 +1,15 @@
 package com.springboot.chapter3.config;
 
+import com.springboot.chapter3.pojo.User;
+import com.springboot.chapter3.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan
+@ComponentScan(basePackages = "com.springboot.chapter3.*", excludeFilters = {@Filter
+        (classes = {UserService.class})})
 // ComponentScan只会扫描本类所在的当前包及其子包
 public class AppConfig {
     @Bean(name = "user")
